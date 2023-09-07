@@ -8,7 +8,24 @@ This is the Frontend for a mini Trello Clone.
 - Tasks can be dragged and dropped within the same stage or across different stages.
 
 ## GUI
-Gui
+User Interfase Screenshots.
+![Image Alt Text](src/assets/screenshots/ss1.png)
+
+
+![Image Alt Text](src/assets/screenshots/ss2.png)
+
+
+![Image Alt Text](src/assets/screenshots/ss3.png)
+
+
+![Image Alt Text](src/assets/screenshots/ss4.png)
+
+
+![Image Alt Text](src/assets/screenshots/ss5.png)
+
+
+![Image Alt Text](src/assets/screenshots/ss6.png)
+
 
 ## Local Environment Setup
 1. Clone this Repository
