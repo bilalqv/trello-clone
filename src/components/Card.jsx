@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faClock, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Card({ cardInfo, index }) {
-  const [background, setBackground] = useState('');
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    if (cardInfo.addBackgroundImage) {
-      const seed = Math.floor(Math.random() * 1000);
-      const imageUrl = `https://picsum.photos/100/100?seed=${seed}`;
-      setBackground(imageUrl);
-    }
-    const randomNumber = Math.floor(Math.random() * 100);
-    setProgress(randomNumber);
-  }, []);
-
 
   return (
     <Draggable draggableId={cardInfo.id.toString()} index={index}>
@@ -28,16 +16,15 @@ export default function Card({ cardInfo, index }) {
         >
           {cardInfo.addBackgroundImage && (
             <div className='w-full h-32 relative my-2'>
-              <img src={background} alt="" className='w-full h-full object-cover rounded-md' />
+              <img src={cardInfo.backgroundImage} alt="" className='w-full h-full object-cover rounded-md' />
             </div>
           )}
           <div className="bg-white h-3 w-full rounded-full my-1">
             <div className="bg-teal-500 h-full rounded-full "
-              style={{ width: `${progress}%`}} 
+              style={{ width: `${cardInfo.taskProgress}%` }}
             ></div>
           </div>
           <p className="text-xl">{cardInfo.title}</p>
-
 
           <div className="flex items-center justify-between p-2 ">
             <div className="flex space-x-4">

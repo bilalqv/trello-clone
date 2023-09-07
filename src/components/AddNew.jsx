@@ -27,11 +27,20 @@ export default function AddNew({ type, parentId }) {
           cardInfo.deadline = formattedDate;
         }
       }
+
+      if (addBackgroundImage) {
+        const seed = Math.floor(Math.random() * 1000);
+        const imageUrl = `https://picsum.photos/100/100?seed=${seed}`;
+        cardInfo.backgroundImage = imageUrl;
+      }
+      
       const randomNumber = Math.floor(Math.random() * 100);
       const profileImage = `https://randomuser.me/api/portraits/men/${randomNumber}.jpg`;
       cardInfo.profileImage = profileImage;
       cardInfo.addBackgroundImage = addBackgroundImage;
 
+      const taskProgress = Math.floor(Math.random() * 100);
+      cardInfo.taskProgress = taskProgress;
       dispatch(addCard(cardInfo));
     } else {
       dispatch(addStage({ title: inputTitle, id: Date.now() }));
