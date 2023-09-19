@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiOutlineGithub } from 'react-icons/ai';
 
 function Navbar() {
   return (
@@ -7,12 +8,10 @@ function Navbar() {
         {/* Left side */}
         <div className="flex items-center space-x-4">
           <h1 className="text-2xl text-white font-bold">Mini Trello</h1>
-          <a href="#" className="text-white hover:text-gray-300">Trello & Co.</a>
-          <a href="#" className="text-white hover:text-gray-300">Team Visible</a>
         </div>
 
         {/* Right side */}
-        <a href="#" className="text-white hover:text-gray-300">Show Menu</a>
+        <a href="https://github.com/crediblebilal/trello-clone" target='_blank' className="text-white text-2xl hover:text-black"> <AiOutlineGithub /> </a>
       </div>
     </nav>
   );

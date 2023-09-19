@@ -1,7 +1,6 @@
 import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faBars } from '@fortawesome/free-solid-svg-icons';
+import { AiOutlineClockCircle, AiOutlineBars } from 'react-icons/ai';
 
 export default function Card({ cardInfo, index }) {
 
@@ -29,11 +28,11 @@ export default function Card({ cardInfo, index }) {
           <div className="flex items-center justify-between p-2 ">
             <div className="flex space-x-4">
               <span >
-                <FontAwesomeIcon icon={faClock} className='mr-3  text-gray-500' />
+                <AiOutlineClockCircle className='mr-3  text-gray-800' />
                 {cardInfo.deadline && cardInfo.deadline}
               </span>
               <span>
-                <FontAwesomeIcon icon={faBars} className='text-gray-500' />
+                <AiOutlineBars className='text-gray-800' />
               </span>
             </div>
             <div className="flex items-center space-x-2">
