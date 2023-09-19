@@ -32,14 +32,14 @@ export default function Body() {
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
-      <div className=" bg-blue-200 h-screen">
-        <div className="flex flex-wrap">
+      <div className=" bg-blue-200  min-h-screen">
+        <div className="flex flex-wrap items-stretch">
           {stages.map((stage, index) => (
             <Stage key={stage.id} stage={stage} index={index} />
           ))}
         </div>
 
-        <div className="p-3 bg-gray-200 w-1/5 text-center mx-auto rounded-lg">
+        <div className="p-3 bg-gray-200 max-[550px]:w-10/12 max-[800px]:w-6/12 w-4/12 text-center mx-auto rounded-lg">
           <AddNew type="stage" />
         </div>
       </div>
